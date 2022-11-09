@@ -1,0 +1,33 @@
+**Challenge Name**  
+Balanced Subarray Sums
+
+**Description**  
+Count the subarrays with a balanced sum
+
+**Problem Statement**  
+The Chair of [CSGSA](https://bouldercsgrads.org/) and a marathon runner, [Maggie](https://www.linkedin.com/in/e-margaret-perkoff-a35b5983/), is a great problem-solver. She has challenged you to solve the following problem optimally. She defines a number to be balanced if the sum of digits in the first half is equal to the sum of the digits in the second half (ignoring the middle digit for numbers with odd length). For a given array of integers $A$ of size $N$, count the number of subarrays $A_i$... $A_j$, $0 \leq i \leq j < N$ such that the sum, $S$, of all the elements in the subarray $S = \sum_{k=i}^j A_k$ is a balanced number.
+
+**Sample Example**  
+
+Let [12345, 67889, 1] be the array. All the subarrays are-  
+
+- [12345], sum = 12345, left sum = 1+2=3, right sum = 4+5=9, not balanced  
+- [67889], sum = 67889, left sum = 6+7=13, right sum = 8+9=17, not balanced  
+- [1], sum = 1, left sum = 0, right sum = 0, **balanced**  
+- [12345, 67889], sum = 80234, left sum = 8+0=8, right sum = 3+4=7, not balanced  
+- [67889, 1], sum = 67890, left sum = 6+7=13, right sum = 9+0=9, not balanced  
+- [12345, 67889, 1], sum = 80235, left sum = 8+0=8, right sum = 3+5=8, **balanced**  
+
+Hence, the count of subarrays with a balanced sum is 2.
+
+
+**Input Format**  
+The first line contains an integer $N$, the number of integers.  
+The second line contains $N$ space-separated integers, the array $A$.
+
+**Constraints**  
+$1 \leq N \leq 3000$  
+$0 \leq A[i] \leq 10^9$  
+
+**Output Format**  
+Print the integer count.
