@@ -1,0 +1,5 @@
+4 4
+Check 0 3
+Connect 0 1
+Connect 3 1
+Check 0 3

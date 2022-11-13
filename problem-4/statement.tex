@@ -1,0 +1,48 @@
+**Challenge Name**  
+Friendship Queries
+
+**Description**  
+Answer Check and Connect queries based on friendship
+
+**Problem Statement**  
+The Treasurer of [CS-GPDC](https://www.linkedin.com/company/cs-gpdc), [Nikita](https://www.linkedin.com/in/nikita-menon-267523112/), is a social person, and she enjoys hanging out with friends. To teach some kids the importance of having a friend circle to some kids, she wants to play a game with them. There are $N$ kids in a garden, and you are responsible for creating friend circles among them. Nikita will ask you $Q$ queries of types $Connect$ and $Check$ based on the friendship of two kids $x$ and $y$. For a query of type $Connect$, connect $x$ and $y$, including their friend circles, and answer with the size of the newly formed friend circle. If $x$ and $y$ are already friends, answer with the size of their existing friend circle. For a query of type $Check$, check whether $x$ and $y$ are friends. If they are friends, answer with the size of their friend circle, otherwise answer with -1.  
+
+**Sample Example**  
+
+```text
+4 4
+Check 0 3
+Connect 0 1
+Connect 3 1
+Check 0 3
+```
+
+Initially, we have 4 kids and 4 friend circles (with just one kid in each).  
+The friend circles are- <0> <1> <2> <3>  
+
+`Check 0 3`  
+Since 0 and 3 are not friends, we answer with -1.  
+
+`Connect 0 1`  
+We connect 0 and 1.  
+The friend circles are- <0, 1> <2> <3>  
+
+`Connect 3 1`  
+We connect 3 and 1.  
+The friend circles are- <0, 1, 3> <2>  
+
+`Check 0 3`  
+Since 0 and 3 are now friends, we answer with the size of their friend circle, 3.  
+
+
+
+**Input Format**  
+The first line contains two space-separated integers $N$, the number of kids, and $Q$, the number of queries.  
+The next $Q$ lines are of the form <$type$ $x$ $y$> where the string $type$ is either $Connect$ or $Check$, and $x$ and $y$ are the two kids. ($x$, $y$ are 0-indexed.)
+
+**Constraints**  
+$1 \leq N, Q \leq 10^5$  
+$0 \leq x, y \leq (N-1)$  
+
+**Output Format**  
+Print the answer of each query on a new line.
