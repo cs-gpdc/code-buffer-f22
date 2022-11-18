@@ -1,8 +1,10 @@
 #include<iostream>
 using namespace std;
+
 struct Node {
   Node* children[26]{};
 };
+
 void insert(Node* root, string s) {
   for (int i=0; s[i]; i++) {
     int idx = s[i] - 'a';
@@ -12,6 +14,7 @@ void insert(Node* root, string s) {
     root = root->children[idx];
   }
 }
+
 void solve(Node* root, string& s) {
   bool leaf = true;
   for(int idx=0; idx<26; idx++) {
@@ -24,6 +27,7 @@ void solve(Node* root, string& s) {
   }
   if (leaf) cout << s << '\n';
 }
+
 int main(void) {
   int n; cin >> n;
   Node* root = new Node();

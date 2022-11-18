@@ -7,6 +7,7 @@ def isBalanced(x):
     leftSum += ord(s[i]) - ord('0')
     rightSum += ord(s[n -1 -i]) - ord('0')
   return leftSum == rightSum
+
 n = int(input())
 v = [int(x) for x in input().split()]
 p = [0] * n
